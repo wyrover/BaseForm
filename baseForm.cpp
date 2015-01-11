@@ -1,5 +1,5 @@
 //Primary author: Jonathan Bedard
-//Confirmed working: 10/28/2014
+//Confirmed working: 1/11/2015
 
 #ifndef BASEFORM_CPP
 #define BASEFORM_CPP
@@ -231,6 +231,7 @@
 
 		formResize();
 
+		setTraverse(false);
 		//Test name
 		message_status = 0;
 		if(myInfo.getName() == "NULL")

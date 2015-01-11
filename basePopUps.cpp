@@ -1,5 +1,5 @@
 //Primary author: Jonathan Bedard
-//Confirmed working: 9/30/2014
+//Confirmed working: 1/11/2015
 
 #ifndef BASEPOPUPS_CPP
 #define BASEPOPUPS_CPP
@@ -37,6 +37,8 @@
 		pushElement(&btnNo);
 		addMouseListener(&btnNo);
 
+		lblStatus.setWidth(250);
+
 		virtualFormResize();
 	}
 	//Moves around objects during a resize
@@ -47,7 +49,6 @@
 			forceSize(width, BASEFORM_MIN_HEIGHT);
 		if(width<BASEFORM_MIN_WIDTH)
 			forceSize(BASEFORM_MIN_WIDTH,height);
-
 
 		lblLine2.setX(lblStatus.getX());
 		lblLine2.setY(lblStatus.getY()-25);
@@ -88,6 +89,7 @@
 	newNamePopUp::newNamePopUp(glForm* f, char* str):
 		glPopUp(f,str)
 	{
+		lblStatus.setWidth(250);
 		lblLine2.setText((char*) "Your new changes will not become");
 		lblLine3.setText((char*) "active until an application restart.");
 		lblLine4.setText((char*) "Would you like to shutdown?");
@@ -116,7 +118,6 @@
 			forceSize(width, BASEFORM_MIN_HEIGHT);
 		if(width<BASEFORM_MIN_WIDTH)
 			forceSize(BASEFORM_MIN_WIDTH,height);
-
 
 		lblLine2.setX(lblStatus.getX());
 		lblLine2.setY(lblStatus.getY()-25);
